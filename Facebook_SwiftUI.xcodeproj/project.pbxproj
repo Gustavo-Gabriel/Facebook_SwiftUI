@@ -11,6 +11,8 @@
 		F1FA76CF25B5E0460090ECDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA76CE25B5E0460090ECDF /* ContentView.swift */; };
 		F1FA76D125B5E0480090ECDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FA76D025B5E0480090ECDF /* Assets.xcassets */; };
 		F1FA76D425B5E0480090ECDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FA76D325B5E0480090ECDF /* Preview Assets.xcassets */; };
+		F1FA76DD25B62BDB0090ECDF /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA76DC25B62BDB0090ECDF /* StoriesView.swift */; };
+		F1FA76E025B62C550090ECDF /* FBPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA76DF25B62C550090ECDF /* FBPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		F1FA76D025B5E0480090ECDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1FA76D325B5E0480090ECDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1FA76D525B5E0480090ECDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1FA76DC25B62BDB0090ECDF /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		F1FA76DF25B62C550090ECDF /* FBPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				F1FA76D025B5E0480090ECDF /* Assets.xcassets */,
 				F1FA76D525B5E0480090ECDF /* Info.plist */,
 				F1FA76D225B5E0480090ECDF /* Preview Content */,
+				F1FA76DC25B62BDB0090ECDF /* StoriesView.swift */,
+				F1FA76DF25B62C550090ECDF /* FBPostView.swift */,
 			);
 			path = Facebook_SwiftUI;
 			sourceTree = "<group>";
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FA76E025B62C550090ECDF /* FBPostView.swift in Sources */,
 				F1FA76CF25B5E0460090ECDF /* ContentView.swift in Sources */,
 				F1FA76CD25B5E0460090ECDF /* Facebook_SwiftUIApp.swift in Sources */,
+				F1FA76DD25B62BDB0090ECDF /* StoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
