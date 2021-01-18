@@ -63,6 +63,21 @@ struct ContentView: View {
                         }
                         .padding()
                         
+                        FBPost(name: "Mark Zuckerberg",
+                               post: "Hey guys I made this cool website called thefacebook to see if Im cool or not",
+                               imageName: "person1")
+                        Spacer()
+                        
+                        FBPost(name: "Jeff Bezos",
+                               post: "You'll see once I take over the world with Amazon",
+                               imageName: "person2")
+                        Spacer()
+                        
+                        FBPost(name: "Bill Gates",
+                               post: "Who cares - I made Windows!",
+                               imageName: "person3")
+                        Spacer()
+                        
                     }
                 }
             }
@@ -74,6 +89,84 @@ struct ContentView: View {
     }
 }
 
+struct FBPost: View{
+    
+    let name: String
+    let post: String
+    let imageName: String
+    
+    var body: some View {
+    
+        VStack{
+            HStack{
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(25)
+                
+                VStack{
+                    
+                    HStack{
+                        Text(name)
+                            .foregroundColor(Color.blue)
+                            .font(.system(size: 18, weight: .semibold, design: .default))
+                        Spacer()
+                    }
+                    
+                    HStack{
+                        Text("12 minutes ago")
+                            .foregroundColor(Color(.secondaryLabel))
+                        Spacer()
+                    }
+                    
+                }
+                
+                Spacer()
+            }
+            
+            Spacer()
+            
+            HStack{
+                Text(post)
+                    .font(.system(size: 24, weight: .regular, design: .default))
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
+            
+            Spacer()
+            
+            HStack{
+                Button(action: {
+                    
+                }, label: {
+                    Text("Like")
+                })
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Comment")
+                })
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Share")
+                })
+            }
+            .padding()
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(7)
+        
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
