@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Binding var text: String
+    
+    let stories = ["story1", "story2", "story3", "story1", "story2", "story3"]
+    
     // Cor do Texto do Facebook
     let facebookBlue = UIColor(red: 23/255.0, green: 120/255.0, blue: 242/255.0, alpha: 1)
     
@@ -33,14 +37,46 @@ struct ContentView: View {
             }
             .padding() // Espaco nas Margens
             
+            TextField("Search...", text: $text)
+                .padding(7)
+                .background(Color(.systemGray5))
+                .cornerRadius(13)
+                .padding(.horizontal, 15)
+            
+            ZStack{
+                Color(.secondarySystemBackground)
+                
+                ScrollView(.vertical){
+                    VStack{
+                        
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(spacing: 3){
+                                ForEach(stories, id: \.self) { name in
+                                    Image(name)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 140, height: 200, alignment: .center)
+                                        .background(Color.red)
+                                        .clipped()
+                                }
+                            }
+                        }
+                        .padding()
+                        
+                    }
+                }
+            }
+                
+            
             Spacer()
         }
         
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(text: .constant(""))
     }
 }
